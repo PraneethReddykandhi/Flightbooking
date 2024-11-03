@@ -35,7 +35,7 @@ Setup
 Clone the repository or download the project files.
 bash
 Copy code
-git clone https://github.com/yourusername/BookMyFlight.git
+git clone https://github.com/PraneethReddykandhi/Flightbooking.git
 Navigate to the project directory.
 bash
 Copy code

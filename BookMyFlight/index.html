@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyFlight</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header with Logo Image, Navigation, and Sign In/Sign Up -->
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="BookMyFlight Logo" class="logo"> <!-- Replace with the actual path to the logo image -->
+        </div>
+        <nav class="nav-center">
+            <ul>
+                <li><a href="#home" id="home-link">Home</a></li>
+                <li><a href="#flights" id="flights-link">Flights</a></li>
+                <li><a href="#about" id="about-link">About</a></li>
+                <li><a href="#contact" id="contact-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <button id="sign-in-btn">Sign In</button>
+            <button id="sign-up-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Home Section with Background Image -->
+    <section id="home" class="page-section home-section">
+        <div class="search-container">
+            <h1>Find Your Next Flight</h1>
+            <button id="search-flights">Search</button>
+        </div>
+    </section>
+
+    <!-- Flights Search Section -->
+    <section id="flights" class="page-section flights-section">
+        <div class="flight-search-container">
+            <div class="search-options">
+                <select id="trip-type">
+                    <option value="oneway">One-Way</option>
+                    <option value="roundtrip">Round Trip</option>
+                </select>
+                <select id="origin">
+                    <option selected disabled>Select Origin</option>
+                    <option value="City1">City1</option>
+                    <option value="City2">City2</option>
+                </select>
+                <select id="destination">
+                    <option selected disabled>Select Destination</option>
+                    <option value="City1">City1</option>
+                    <option value="City2">City2</option>
+                </select>
+                <input type="date" id="departure-date">
+                <input type="date" id="return-date" disabled> <!-- Return Date initially disabled -->
+                <button id="search-flight-btn">Search</button>
+            </div>
+            <div class="flight-results" id="flight-results">
+                <!-- Sample flight results will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Passenger Details Section -->
+    <section id="passenger-details" class="page-section">
+        <div class="passenger-details-container">
+            <h2>Passenger Details</h2>
+            <form id="passenger-form">
+                <input type="text" id="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+                <input type="text" id="passport-no" placeholder="Passport No" required>
+                <select id="age" required>
+                    <option selected disabled>Age</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-60">46-60</option>
+                    <option value="60+">60+</option>
+                </select>
+                <button type="submit">Book</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sign In Section -->
+    <section id="sign-in" class="page-section auth-section">
+        <div class="auth-container">
+            <h2>Sign In</h2>
+            <form id="sign-in-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="sign-up" class="page-section auth-section">
+        <div class="auth-container">
+            <h2>Sign Up</h2>
+            <form id="sign-up-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="sign-up-username">Username:</label>
+                <input type="text" id="sign-up-username" name="username" required>
+                <label for="sign-up-password">Password:</label>
+                <input type="password" id="sign-up-password" name="password" required>
+                <label for="verify-password">Verify Password:</label>
+                <input type="password" id="verify-password" name="verify-password" required>
+                <p id="error-message" class="error-message"></p>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page-section about-section">
+        <div class="about-container">
+            <h2>About: BookMyFlight</h2>
+            <p>Welcome to BookMyFlight! Your one-stop solution for booking domestic and international flights with ease.</p>
+            <h3>Domestic Contact Info</h3>
+            <p>Phone: +1 (800) 123-4567</p>
+            <h3>International Contact Info</h3>
+            <p>Phone: +1 (800) 987-6543</p>
+            <h3>Email Address</h3>
+            <p>Email: support@bookmyflight.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <a href="https://facebook.com" target="_blank" class="social-media">Facebook</a>
+        </div>
+        <p class="footer-center">&copy; 2024 BookMyFlight. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
